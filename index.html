@@ -6,23 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to CIT 215</h1>
-    <label>Your course name : <input class="course" type="text"></input></label>
-    
-</body>
-<label for "coursename">Your course name : <input class="course" type="text"></input></label>
-
+    <label>What language was created to add interactivity to the Web? :<input class="language" type="text"></label>
     <script>
+alert(document.querySelector('.language'));
 
-        alert("Hello World");
+var txtCourse = document.querySelector('.language');
 
-        alert(document.querySelector('.course'));
+txtCourse.addEventListener('focusout',
 
-        var txtCourse = document.querySelector('.course');
+    (event) => { alert(txtCourse.value) })
 
-        txtCourse.addEventListener('focusout',
+    let userResponse = prompt("Which code library would you prefer? Vue, React, or jQuery");
 
-            (event) => { alert(txtCourse.value) })
-
+alert( userResponse + " that's a great code library to use!");
     </script>
+</body>
 </html>
